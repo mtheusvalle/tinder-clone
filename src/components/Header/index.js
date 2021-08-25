@@ -1,9 +1,12 @@
 import PersonIcon from '@material-ui/icons/Person';
+import ForumIcon from '@material-ui/icons/Forum';
 import IconButton from '@material-ui/core/IconButton';
+
+import TinderLogo from '../../assets/tinder-logo.png';
 
 import './styles.scss';
 
-export default function Header () {
+export default function Header() {
   return (
     <div className="header">
       <IconButton>
@@ -11,9 +14,13 @@ export default function Header () {
       </IconButton>
 
       <img 
-        src="https://1000logos.net/wp-content/uploads/2018/07/Tinder-logo-700x394.png" 
-        alt="" 
+        src={TinderLogo} 
+        alt="Tinder Logo" 
       />
+
+      <IconButton>
+        <ForumIcon fontSize="large" className="header__icon" />
+      </IconButton>
     </div>
   )
 };
